@@ -1,0 +1,12 @@
+<div class="welcome-container">
+
+  @if (user && user.login) {
+    <h1 class="title">Welcome, {{ user.login.name }}!</h1>
+    <p class="info">Your data is:</p>
+    <p class="info">E-mail: {{ user.login.email }}</p>
+    <p class="info">Company: {{ user.login.company }}</p>
+  } @else {
+    <p class="info">Data not provided!</p>
+  }
+  <button class="back-button" [routerLink]="['']">Back to Login</button>
+</div>
