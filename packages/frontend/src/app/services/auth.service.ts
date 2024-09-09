@@ -39,7 +39,7 @@ export class AuthService {
     this.user$.next(user)
   }
 
-  login({email, password}: any) {
+  login({email, password}: LoginInput) {
     return this.apollo.mutate<User, LoginInput>({
       mutation: gql`
         mutation Login($email: String, $password: String) {
